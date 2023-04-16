@@ -8,7 +8,7 @@ found = False
 dirs = os.listdir()
 for i in range(len(dirs)):
     s = i - 1
-    if dirs[s] == "packages":
+    if dirs[s] == "spigot-1.19.4.jar":
         found = True
         break
 
