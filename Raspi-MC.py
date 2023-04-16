@@ -78,3 +78,10 @@ def setup():
 if found == False:
     setup()
 
+import packages.gui as system
+import packages.server as server
+
+while True:
+    output = system.main_menu()
+    if output == 1:
+        pass
