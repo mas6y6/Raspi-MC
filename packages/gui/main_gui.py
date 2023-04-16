@@ -1,5 +1,4 @@
 import os
-import time
 from getkey import getkey, keys
 
 def main_menu():
@@ -17,4 +16,5 @@ def main_menu():
         print("Input the number of the item")
         print("===============================")
         output = key
+        break
     return output
