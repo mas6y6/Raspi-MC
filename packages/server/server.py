@@ -1,7 +1,14 @@
 import os
 from tkinter.filedialog import askopenfilename
 import time
+import subprocess
 #SETTINGS
+
+def start():
+    subprocess.run("clear")
+    print("Starting Server..")
+    subprocess.run("java -Xmx1024M -Xms1024M -jar spigot-1.19.4 nogui")
+
 
 def _grab_old_prop_data():
     with open("server.properties","r") as tet:
