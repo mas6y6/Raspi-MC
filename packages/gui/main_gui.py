@@ -30,14 +30,16 @@ def Server_settings():
         os.system("clear")
         print("============ Server Settings ============")
         print()
-        print("1. Bukkit")
-        print("2. Spigot")
-        print("3. IP Settings")
-        print("4. Exit")
+        print("1. Server IP")
+        print("2. Edit MOTD")
+        print("3. Edit Port")
+        print("4. Edit Max players")
+        print("5. Advanced (WIP)")
+        print("6. Back")
         print()
         print("=======================================")
         key = getkey()
-        if key == "1" or key == "2" or key == "3" or key == "4":
+        if key == "1" or key == "3" or key == "4":
             output = key
             break
         else:
