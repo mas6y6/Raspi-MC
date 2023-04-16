@@ -7,7 +7,7 @@ import subprocess
 def start():
     subprocess.run("clear")
     print("Starting Server..")
-    subprocess.run("java -Xmx1024M -Xms1024M -jar spigot-1.19.4 nogui")
+    subprocess.run("java -Xmx1024M -Xms1024M -jar spigot-1.19.4 nogui", shell=True)
 
 
 def _grab_old_prop_data():
