@@ -1,4 +1,6 @@
 import os
+from getkey import getkey, keys
+
 def Error(Error, Info):
     os.system("clear")
     print("============ Error =============")
@@ -19,3 +21,27 @@ def loading(info):
     print(info)
     print()
     print("==============================")
+
+def confirm(info):
+    while True:
+        os.system("clear")
+        print("==============================")
+        print()
+        print(info)
+        print()
+        print("Y/n")
+        print()
+        print("==============================")
+        key = getkey()
+        if key == "Y":
+            output = True
+            break
+        elif key == "n":
+            output = False
+            break
+        else:
+            pass
+    os.system("clear")
+    return output
+
+confirm("Do you agree with the minecraft eula?\n Required to start server")
