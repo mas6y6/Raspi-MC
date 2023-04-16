@@ -2,7 +2,6 @@ import os
 from getkey import getkey, keys
 
 def main_menu():
-    key = getkey()
     os.system("clear")
     print("========== Main menu ==========")
     print()
@@ -14,6 +13,8 @@ def main_menu():
     print()
     print("Input the number of the item")
     print("===============================")
+    key = getkey()
     return key
 
-main_menu()
+def alert():
+    pass
