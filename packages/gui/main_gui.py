@@ -1,3 +1,6 @@
+import os
+from getkey import getkey, keys
+
 def main_menu():
     while True:
         os.system("clear")
@@ -19,5 +22,25 @@ def main_menu():
             break
         else:
             output = None
+    os.system("clear")
     return output
-    os.system()
+
+def Server_settings():
+    while True:
+        os.system("clear")
+        print("============ Server Settings ============")
+        print()
+        print("1. Bukkit")
+        print("2. Spigot")
+        print("3. IP Settings")
+        print("4. Exit")
+        print()
+        print("=======================================")
+        key = getkey()
+        if key == "1" or key == "2" or key == "3" or key == "4":
+            output = key
+            break
+        else:
+            output = None
+    os.system("clear")
+    return output
