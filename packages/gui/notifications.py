@@ -43,5 +43,3 @@ def confirm(info):
             pass
     os.system("clear")
     return output
-
-confirm("Do you agree with the minecraft eula?\n Required to start server")
