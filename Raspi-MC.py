@@ -83,5 +83,9 @@ import packages.server as server
 
 while True:
     output = system.main_menu()
-    if output == 1:
-        pass
+    if output == "8":
+        #Stops main menu
+        break
+    elif output == "1":
+        os.system("clear")
+        server.start()
