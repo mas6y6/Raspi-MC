@@ -7,7 +7,7 @@ import subprocess
 def start():
     subprocess.run("clear")
     print("Starting Server..")
-    subprocess.run("java -Xmx1024M -Xms1024M -jar spigot-1.19.4 nogui", shell=True)
+    subprocess.run("java -jar paper.jar nogui")
 
 
 def _grab_old_prop_data():
@@ -19,10 +19,10 @@ def hardcore(bool):
     data = _grab_old_prop_data()
     os.remove("server.properties")
     if hardcore == True:
-        data[21] = f"hardcore=true\n"
+        data[45] = f"hardcore=true\n"
 
     else:
-        data[21] = f"hardcore=false\n"
+        data[45] = f"hardcore=false\n"
     with open("server.properties","w") as e:
         for i in range(len(data)):
 
@@ -31,7 +31,7 @@ def hardcore(bool):
 def gamemode(mode):
     data = _grab_old_prop_data()
     os.remove("server.properties")
-    data[18] = f"gamemode={gamemode}\n"
+    data[5] = f"gamemode={gamemode}\n"
     with open("server.properties","w") as e:
         for i in range(len(data)):
 
@@ -40,7 +40,7 @@ def gamemode(mode):
 def seed(seed):
     data = _grab_old_prop_data()
     os.remove("server.properties")
-    data[26] = f"level-seed={seed}\n"
+    data[4] = f"level-seed={seed}\n"
     with open("server.properties","w") as e:
         for i in range(len(data)):
 
@@ -49,7 +49,7 @@ def seed(seed):
 def diff(difficulty):
     data = _grab_old_prop_data()
     os.remove("server.properties")
-    data[7] = f"difficulty={difficulty}\n"
+    data[16] = f"difficulty={difficulty}\n"
     with open("server.properties","w") as e:
         for i in range(len(data)):
 
@@ -58,7 +58,7 @@ def diff(difficulty):
 def ip(ip):
     data = _grab_old_prop_data()
     os.remove("server.properties")
-    data[47] = f"server-ip={ip}\n"
+    data[28] = f"server-ip={ip}\n"
 
     with open("server.properties","w") as e:
         for i in range(len(data)):
@@ -68,7 +68,7 @@ def ip(ip):
 def motd(motd):
     data = _grab_old_prop_data()
     os.remove("server.properties")
-    data[32] = f"motd={motd}\n"
+    data[11] = f"motd={motd}\n"
 
     with open("server.properties","w") as e:
         for i in range(len(data)):
@@ -78,8 +78,8 @@ def motd(motd):
 def port(port):
     data = _grab_old_prop_data()
     os.remove("server.properties")
-    data[48] = f"server-port={port}\n"
-    data[39] = f"query.port={port}\n"
+    data[31] = f"server-port={port}\n"
+    data[12] = f"query.port={port}\n"
 
     with open("server.properties","w") as e:
         for i in range(len(data)):

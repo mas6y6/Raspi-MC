@@ -34,7 +34,7 @@ def Server_settings():
         print("2. Edit MOTD")
         print("3. Edit Port")
         print("4. Edit Max players")
-        print("5. Advanced (WIP)")
+        print("5. Advanced 1.0")
         print("6. Back")
         print()
         print("=======================================")
