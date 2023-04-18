@@ -79,14 +79,15 @@ def setup():
 if found == False:
     setup()
 
-import packages.gui as system
+import packages.gui as gui
 import packages.server as server
 
 while True:
-    output = system.main_menu()
+    output = gui.main_menu()
     if output == "8":
         #Stops main menu
         break
     elif output == "1":
+        gui.alert()
         os.system("clear")
         server.start()
