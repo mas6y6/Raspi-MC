@@ -8,7 +8,7 @@ found = False
 dirs = os.listdir()
 for i in range(len(dirs)):
     s = i - 1
-    if dirs[s] == "spigot-1.19.4.jar":
+    if dirs[s] == "paper.jar":
         found = True
         break
 
@@ -35,7 +35,7 @@ def setup():
     os.system("clear")
     print("=====================================")
     print()
-    print("You need to have github and java 17 installed to install spigot")
+    print("You need to have github and java 17 installed to install paper")
     print()
     print('Press "enter" to continue')
     print()
@@ -58,11 +58,12 @@ def setup():
     os.chdir(cwd)
     print("=====================================")
     print()
-    print("Downloading Spigot MC 1.19.4 ...")
+    print("Downloading Paper MC 1.19.4 ...")
     print()
     print("=====================================")
 
-    #run("wget https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/514/downloads/paper-1.19.4-514.jar",shell=True)
+    run("wget https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/514/downloads/paper-1.19.4-514.jar",shell=True)
+    os.rename("paper-1.19.4-514.jar","paper.jar")
 
     os.system("clear")
 
@@ -73,7 +74,7 @@ def setup():
     print()
     print("=====================================")
 
-    #run("java -jar paper.jar nogui",shell=True)
+    run("java -jar paper.jar nogui",shell=True)
 
 if found == False:
     setup()
