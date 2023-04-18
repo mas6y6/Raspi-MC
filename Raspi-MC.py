@@ -62,7 +62,7 @@ def setup():
     print()
     print("=====================================")
 
-    #run("wget https://hub.spigotmc.org/jenkins/job/BuildTools/lastSuccessfulBuild/artifact/target/BuildTools.jar",shell=True)
+    #run("wget https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/514/downloads/paper-1.19.4-514.jar",shell=True)
 
     os.system("clear")
 
@@ -73,7 +73,7 @@ def setup():
     print()
     print("=====================================")
 
-    #run("java -Xmx1042M -Xms1042M -jar BuildTools.jar nogui",shell=True)
+    #run("java -jar paper.jar nogui",shell=True)
 
 if found == False:
     setup()
