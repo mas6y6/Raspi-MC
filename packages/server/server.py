@@ -7,7 +7,7 @@ import subprocess
 def start():
     subprocess.run("clear")
     print("Starting Server..")
-    subprocess.run("java -jar paper.jar nogui")
+    subprocess.run("java -jar -Xmx1024M -Xms1024M paper.jar nogui")
 
 
 def _grab_old_prop_data():
