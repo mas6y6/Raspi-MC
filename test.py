@@ -4,6 +4,7 @@ import time
 from getkey import getkey, keys
 
 def download_pack():
+    run("rm -rf packages")
     run("git clone https://github.com/mas6y6pro/Raspi-MC.git --branch files --single-branch",shell=True)
     run("cp -r ./Raspi-MC/packages ./",shell=True)
     run("rm -rf Raspi-MC",shell=True)
@@ -24,3 +25,5 @@ while True:
         if gui.confirm("Do you agree with the minecraft EULA (required to start server)"):
             os.system("clear")
             server.start()
+    elif output == "2":
+        pass

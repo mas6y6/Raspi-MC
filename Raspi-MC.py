@@ -12,6 +12,12 @@ for i in range(len(dirs)):
         found = True
         break
 
+def download_pack():
+    run("rm -rf packages")
+    run("git clone https://github.com/mas6y6pro/Raspi-MC.git --branch files --single-branch",shell=True)
+    run("cp -r ./Raspi-MC/packages ./",shell=True)
+    run("rm -rf Raspi-MC",shell=True)
+
 def setup():
     print("Loading GUI setup")
     os.system("clear")
@@ -47,9 +53,7 @@ def setup():
     print("Downloading GUI menu from github...")
     print()
     print("=====================================")
-    run("git clone https://github.com/mas6y6pro/Raspi-MC.git --branch files --single-branch",shell=True)
-    run("cp -r ./Raspi-MC/packages ./",shell=True)
-    run("rm -rf Raspi-MC",shell=True)
+    download_pack()
 
     time.sleep(2)
 
@@ -62,7 +66,7 @@ def setup():
     print()
     print("=====================================")
 
-    run("wget https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/514/downloads/paper-1.19.4-514.jar",shell=True)
+    run("wget https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/515/downloads/paper-1.19.4-515.jar",shell=True)
     os.rename("paper-1.19.4-514.jar","paper.jar")
 
     os.system("clear")
