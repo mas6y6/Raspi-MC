@@ -1,4 +1,9 @@
 from subprocess import *
+
+run("pip install tqdm")
+run("pip install getkey")
+
+from tqdm import *
 import os
 import time
 from getkey import getkey, keys
@@ -66,8 +71,8 @@ def setup():
     print()
     print("=====================================")
 
-    run("wget https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/515/downloads/paper-1.19.4-515.jar",shell=True)
-    os.rename("paper-1.19.4-514.jar","paper.jar")
+    run("wget https://api.papermc.io/v2/projects/paper/versions/1.19.4/builds/545/downloads/paper-1.19.4-545.jar",shell=True)
+    os.rename("paper-1.19.4-545.jar","paper.jar")
 
     os.system("clear")
 
