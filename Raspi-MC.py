@@ -1,7 +1,7 @@
 from subprocess import *
 
-run("pip install tqdm")
-run("pip install getkey")
+run("pip install tqdm",shell=True)
+run("pip install getkey",shell=True)
 
 from tqdm import *
 import os
@@ -18,13 +18,12 @@ for i in range(len(dirs)):
         break
 
 def download_pack():
-    run("rm -rf packages")
+    run("rm -rf packages",shell=True)
     run("git clone https://github.com/mas6y6pro/Raspi-MC.git --branch files --single-branch",shell=True)
     run("cp -r ./Raspi-MC/packages ./",shell=True)
     run("rm -rf Raspi-MC",shell=True)
 
 def setup():
-    print("Loading GUI setup")
     os.system("clear")
     print("=====================================")
     print()
@@ -46,7 +45,7 @@ def setup():
     os.system("clear")
     print("=====================================")
     print()
-    print("You need to have github and java 17 installed to install paper")
+    print("You need to have git and java 17 installed to install paper")
     print()
     print('Press "enter" to continue')
     print()
@@ -79,7 +78,7 @@ def setup():
     os.chdir(cwd)
     print("=====================================")
     print()
-    print("Running Spigot...")
+    print("Running paper...")
     print()
     print("=====================================")
 
