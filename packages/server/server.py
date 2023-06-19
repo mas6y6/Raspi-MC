@@ -4,6 +4,10 @@ import time
 import subprocess
 #SETTINGS
 
+if __name__ == "__main__":
+    print("The current process has been Terminated")
+    exit()
+
 def start():
     subprocess.run("clear")
     print("Starting Server..")

@@ -1,6 +1,10 @@
 import os
 from getkey import getkey, keys
 
+if __name__ == "__main__":
+    print("The current process has been Terminated")
+    exit()
+
 def main_menu():
     while True:
         os.system("clear")

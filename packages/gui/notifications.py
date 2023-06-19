@@ -1,6 +1,12 @@
 import os
 from getkey import getkey, keys
 
+if __name__ == "__main__":
+    print("The current process has been Terminated")
+    exit()
+
+
+
 def Error(Error, Info):
     os.system("clear")
     print("============ Error =============")
